@@ -45,6 +45,7 @@ class UserResource extends Resource
             'index' => Pages\ListUsers::route('/'),
             'view' => Pages\ViewUser::route('/{record}'),
             'files.index' => Pages\ManageUserFiles::route('/{record}/files'),
+            'media.index' => Pages\ManageUserMedia::route('/{record}/media'),
         ];
     }
 
@@ -53,6 +54,7 @@ class UserResource extends Resource
         return $page->generateNavigationItems([
             Pages\ViewUser::class,
             Pages\ManageUserFiles::class,
+            Pages\ManageUserMedia::class,
         ]);
     }
 }
